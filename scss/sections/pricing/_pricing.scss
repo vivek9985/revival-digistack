@@ -1,0 +1,137 @@
+@use "../../abstract" as *;
+
+.pricing-container {
+  width: 90%;
+  max-width: 1320px;
+  margin: auto;
+  .pricing-content {
+    text-align: center;
+    margin-bottom: 50px;
+    h2 {
+      @include heading-48();
+      color: $primary;
+      width: 50%;
+      margin: auto;
+    }
+    p {
+      @include text-18();
+      width: 50%;
+      margin: 20px auto 0 auto;
+    }
+  }
+  .pricing-card {
+    background-color: $lightgrey;
+    padding: 50px 40px;
+    border-radius: 24px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    margin-bottom: 100px;
+    .inner-card {
+      background-color: $lightgrey;
+      padding: 30px 25px;
+      border-radius: 24px;
+      border: 1px solid $bordergrey;
+      h3 {
+        @include heading-24();
+        color: $primary;
+        margin-bottom: 20px;
+      }
+      h2 {
+        @include heading-40();
+        color: $primary;
+        margin-bottom: 30px;
+        span {
+          @include text-16();
+        }
+      }
+
+      hr {
+        width: 96%;
+        margin: auto;
+        margin-bottom: 20px;
+      }
+
+      ul {
+        li {
+          @include text-16();
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          margin-bottom: 10px;
+          img,
+          svg {
+            width: 20px;
+            height: 19px;
+            margin-top: 5px;
+          }
+        }
+      }
+
+      button {
+        @include btn($lightgrey, $primary);
+        border: 1px solid $secondary;
+        width: 100%;
+        margin-top: 20px;
+      }
+    }
+    .deep-card {
+      background-color: $primary;
+      transform: scaleY(1.05);
+      h3 {
+        color: $lightgrey;
+      }
+      h2 {
+        color: $secondary;
+        span {
+          color: $textgrey;
+        }
+      }
+
+      hr {
+        background-color: $bordergrey;
+      }
+
+      ul {
+        li {
+          color: $textgrey;
+          img,
+          svg {
+            width: 18px;
+            height: 18px;
+            margin-top: 7px;
+          }
+        }
+      }
+
+      button {
+        @include btn($secondary, $primary);
+        border: 1px solid $secondary;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1080px) {
+  .pricing-container {
+    width: 95%;
+    .pricing-content h2,
+    .pricing-content p {
+      width: 80%;
+    }
+    .pricing-card {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+@media only screen and (max-width: 768px) {
+  .pricing-container {
+    .pricing-content h2,
+    .pricing-content p {
+      width: 90%;
+    }
+    .pricing-card {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}
