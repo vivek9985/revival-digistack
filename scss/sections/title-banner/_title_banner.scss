@@ -1,0 +1,78 @@
+@use "../../abstract" as *;
+
+.title-section {
+  background-color: $primary;
+
+  .title-banner {
+    width: 90%;
+    max-width: 1320px;
+    margin: auto;
+    padding: 130px 0;
+    text-align: center;
+    position: relative;
+    @media (max-width: 1024px) {
+      padding: 110px 0;
+    }
+    @media (max-width: 768px) {
+      padding: 85px 0;
+    }
+
+    div {
+      position: relative;
+      z-index: 5;
+      .title {
+        @include heading-64();
+        color: $lightgrey;
+      }
+      .description {
+        @include text-18();
+        color: $textgrey;
+        width: 90%;
+        max-width: 644px;
+        margin: 20px auto 10px auto;
+      }
+    }
+    .jigjag-icon-one,
+    .jigjag-icon-two {
+      position: absolute;
+      z-index: 0;
+      width: 187px;
+      height: 100px;
+      @media (max-width: 1024px) {
+        width: 140px;
+        height: 70px;
+      }
+      @media (max-width: 768px) {
+        width: 100px;
+        height: 55px;
+      }
+    }
+    .spring-arrow-icon {
+      position: absolute;
+      z-index: 0;
+      width: 50px;
+      height: 60px;
+      @media (max-width: 768px) {
+        width: 40px;
+        height: 50px;
+      }
+    }
+    .jigjag-icon-one {
+      left: 0;
+      bottom: 20%;
+    }
+    .jigjag-icon-two {
+      right: 0;
+      top: 20%;
+    }
+    .spring-arrow-icon {
+      left: 0;
+      right: 0;
+      bottom: 10%;
+      margin: auto;
+      @media (max-width: 768px) {
+        bottom: 5%;
+      }
+    }
+  }
+}

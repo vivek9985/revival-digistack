@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
 /*========TEXT===========*/
 /*========BUTTON===========*/
 :root {
@@ -46,6 +46,11 @@ body {
   font-weight: 700;
   letter-spacing: -0.005em;
   color: var(--primary);
+}
+@media (max-width: 1080px) {
+  .header-container .logo h3 {
+    font-size: 18px;
+  }
 }
 .header-container .menu {
   display: flex;
@@ -360,6 +365,11 @@ body {
   color: #535353;
   margin-top: 20px;
 }
+@media (max-width: 700px) {
+  .service-container .service-content p {
+    font-size: 14px;
+  }
+}
 .service-container .service-btn {
   width: 40%;
   display: flex;
@@ -544,6 +554,11 @@ body {
   letter-spacing: 0.02em;
   margin-top: 20px;
 }
+@media (max-width: 700px) {
+  .choose-us-container .choose-us-right-col p {
+    font-size: 14px;
+  }
+}
 .choose-us-container .choose-us-right-col .choose-us-list {
   display: flex;
   justify-content: space-between;
@@ -614,6 +629,11 @@ body {
   letter-spacing: 0.02em;
   width: 50%;
   margin: 20px auto 0 auto;
+}
+@media (max-width: 700px) {
+  .pricing-container .pricing-content p {
+    font-size: 14px;
+  }
 }
 .pricing-container .pricing-card {
   background-color: var(--light-grey);
@@ -773,6 +793,11 @@ body {
   line-height: 1.66em;
   letter-spacing: 0.02em;
 }
+@media (max-width: 700px) {
+  .question-section .question-content p {
+    font-size: 14px;
+  }
+}
 .question-section .question-container {
   display: flex;
   gap: 20px;
@@ -792,12 +817,22 @@ body {
   font-weight: 700;
   letter-spacing: -0.005em;
 }
+@media (max-width: 1080px) {
+  .question-section .question-container form h3 {
+    font-size: 18px;
+  }
+}
 .question-section .question-container form p {
   margin-top: 10px;
   font-size: 18px;
   font-weight: 400;
   line-height: 1.66em;
   letter-spacing: 0.02em;
+}
+@media (max-width: 700px) {
+  .question-section .question-container form p {
+    font-size: 14px;
+  }
 }
 .question-section .question-container form input {
   width: 100%;
@@ -850,5 +885,119 @@ body {
   .question-section .question-content p {
     width: 100%;
     margin-top: 20px;
+  }
+}
+.title-section {
+  background-color: var(--primary);
+}
+.title-section .title-banner {
+  width: 90%;
+  max-width: 1320px;
+  margin: auto;
+  padding: 130px 0;
+  text-align: center;
+  position: relative;
+}
+@media (max-width: 1024px) {
+  .title-section .title-banner {
+    padding: 110px 0;
+  }
+}
+@media (max-width: 768px) {
+  .title-section .title-banner {
+    padding: 85px 0;
+  }
+}
+.title-section .title-banner div {
+  position: relative;
+  z-index: 5;
+}
+.title-section .title-banner div .title {
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.21em;
+  letter-spacing: -0.003em;
+  color: var(--light-grey);
+}
+@media (max-width: 1380px) {
+  .title-section .title-banner div .title {
+    font-size: 50px;
+  }
+}
+@media (max-width: 1024px) {
+  .title-section .title-banner div .title {
+    font-size: 35px;
+  }
+}
+@media (max-width: 768px) {
+  .title-section .title-banner div .title {
+    font-size: 40px;
+  }
+}
+.title-section .title-banner div .description {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.66em;
+  letter-spacing: 0.02em;
+  color: var(--text-grey);
+  width: 90%;
+  max-width: 644px;
+  margin: 20px auto 10px auto;
+}
+@media (max-width: 700px) {
+  .title-section .title-banner div .description {
+    font-size: 14px;
+  }
+}
+.title-section .title-banner .jigjag-icon-one,
+.title-section .title-banner .jigjag-icon-two {
+  position: absolute;
+  z-index: 0;
+  width: 187px;
+  height: 100px;
+}
+@media (max-width: 1024px) {
+  .title-section .title-banner .jigjag-icon-one,
+  .title-section .title-banner .jigjag-icon-two {
+    width: 140px;
+    height: 70px;
+  }
+}
+@media (max-width: 768px) {
+  .title-section .title-banner .jigjag-icon-one,
+  .title-section .title-banner .jigjag-icon-two {
+    width: 100px;
+    height: 55px;
+  }
+}
+.title-section .title-banner .spring-arrow-icon {
+  position: absolute;
+  z-index: 0;
+  width: 50px;
+  height: 60px;
+}
+@media (max-width: 768px) {
+  .title-section .title-banner .spring-arrow-icon {
+    width: 40px;
+    height: 50px;
+  }
+}
+.title-section .title-banner .jigjag-icon-one {
+  left: 0;
+  bottom: 20%;
+}
+.title-section .title-banner .jigjag-icon-two {
+  right: 0;
+  top: 20%;
+}
+.title-section .title-banner .spring-arrow-icon {
+  left: 0;
+  right: 0;
+  bottom: 10%;
+  margin: auto;
+}
+@media (max-width: 768px) {
+  .title-section .title-banner .spring-arrow-icon {
+    bottom: 5%;
   }
 }/*# sourceMappingURL=style.css.map */
