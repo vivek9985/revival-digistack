@@ -31,6 +31,12 @@
   font-weight: $weight;
   line-height: $height;
   letter-spacing: $spacing;
+  @media (max-width: 1080px) {
+    font-size: 35px;
+  }
+  @media (max-width: 768px) {
+    font-size: 30px;
+  }
 }
 
 @mixin heading-40(
@@ -79,7 +85,7 @@
   font-weight: $weight;
   line-height: $height;
   letter-spacing: $spacing;
-  @media (max-width: 700px) {
+  @media (max-width: 768px) {
     font-size: 14px;
   }
 }
@@ -92,7 +98,7 @@
 
 /*========BUTTON===========*/
 @mixin btn($bg-color, $text-color) {
-  padding: 15px 30px;
+  padding: 15px 35px;
   font-size: 16px;
   font-weight: 600;
   color: $text-color;

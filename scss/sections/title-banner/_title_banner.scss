@@ -23,6 +23,15 @@
       .title {
         @include heading-64();
         color: $lightgrey;
+        width: 90%;
+        max-width: 1063px;
+        margin: auto;
+        @media (max-width: 1024px) {
+          width: 80%;
+        }
+        @media (max-width: 768px) {
+          width: 90%;
+        }
       }
       .description {
         @include text-18();
@@ -58,16 +67,16 @@
       }
     }
     .jigjag-icon-one {
-      left: 0;
+      left: -1%;
       bottom: 20%;
     }
     .jigjag-icon-two {
-      right: 0;
+      right: 0%;
       top: 20%;
     }
     .spring-arrow-icon {
-      left: 0;
-      right: 0;
+      left: 0%;
+      right: 0%;
       bottom: 10%;
       margin: auto;
       @media (max-width: 768px) {
