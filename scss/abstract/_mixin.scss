@@ -23,7 +23,7 @@
 }
 @mixin heading-48(
   $size: 48px,
-  $weight: 700,
+  $weight: 900,
   $height: 1.25em,
   $spacing: -0.03em
 ) {
@@ -95,16 +95,21 @@
   line-height: $height;
   letter-spacing: $spacing;
 }
+@mixin text-14($size: 14px, $weight: 300, $height: 1.75em, $spacing: 0.01em) {
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $height;
+  letter-spacing: $spacing;
+}
 
 /*========BUTTON===========*/
 @mixin btn($bg-color, $text-color) {
   padding: 15px 35px;
-  font-size: 16px;
-  font-weight: 600;
   color: $text-color;
   cursor: pointer;
   border: 1px solid transparent;
   border-radius: 50px;
   transition: all 0.4s;
   background-color: $bg-color;
+  @include text-18(18px, 600);
 }

@@ -8,7 +8,6 @@
   align-items: center;
   justify-content: space-between;
   padding: 20px 5px;
-  overflow: hidden;
 
   .logo {
     display: flex;
@@ -31,6 +30,7 @@
     align-items: center;
     gap: 20px;
     list-style: none;
+    position: relative;
     .active {
       border-bottom: 1.5px solid $secondary;
     }
@@ -42,14 +42,49 @@
         color: $primary;
       }
     }
+  }
+  .pages {
+    span {
+      cursor: pointer;
+    }
+  }
+  .pages:hover .dropdown-menu {
+    top: 50px;
+    visibility: visible;
+    opacity: 1;
+  }
 
-    .dropdown-menu {
-      display: none;
-
-      ul {
-        list-style: none;
-        background-color: yellow;
+  .dropdown-menu {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 7px;
+    padding: 20px 30px;
+    visibility: hidden;
+    position: absolute;
+    right: 0;
+    top: 90px;
+    z-index: 100;
+    opacity: 0;
+    border-radius: 10px;
+    background-color: $secondary;
+    transition: all ease-in 0.3s 0.1s;
+    li {
+      a:hover {
+        color: $textgrey;
       }
+    }
+    &::after {
+      content: "";
+      width: 20px;
+      height: 20px;
+      background-color: $secondary;
+      position: absolute;
+      top: -4%;
+      right: 15%;
+      transform: rotate(45deg);
     }
   }
 

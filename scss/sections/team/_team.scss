@@ -1,0 +1,113 @@
+@use "../../abstract" as *;
+
+.team-section {
+  width: 90%;
+  max-width: 1320px;
+  margin: 100px auto 0 auto;
+  .title-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+    .team-title {
+      @include heading-40();
+      @media (max-width: 768px) {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+    }
+    a {
+      @include btn($secondary, $primary);
+    }
+  }
+  .team-container {
+    display: grid;
+    grid-template-columns: repeat(3, 424px);
+    justify-content: space-between;
+    gap: 20px;
+    @media (max-width: 1500px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media (max-width: 1080px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 768px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    .team-card {
+      height: 440px;
+      background-image: url(../../../images/member-one.jpg);
+      background-repeat: no-repeat;
+      background-position: top;
+      background-size: cover;
+      border-radius: 12px;
+      overflow: hidden;
+      padding: 18px;
+      display: flex;
+      align-items: end;
+      justify-content: center;
+      @media (max-width: 1400px) {
+        height: 350px;
+      }
+      @media (max-width: 768px) {
+        height: 450px;
+      }
+      @media (max-width: 580px) {
+        height: 300px;
+      }
+      .member-info {
+        width: 100%;
+        background-color: $lightgrey;
+        border-radius: 12px;
+        padding: 30px 20px;
+        text-align: center;
+        @media (max-width: 1400px) {
+          padding: 20px;
+        }
+        @media (max-width: 1200px) {
+          padding: 15px;
+        }
+        .member-name {
+          @include text-20(20px, 900, 1.6em, -0.01em);
+        }
+        .member-position {
+          @include text-16();
+          color: $greyblue;
+          margin-bottom: 12px;
+        }
+        .socials {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 15px;
+          a {
+            width: 36px;
+            height: 36px;
+            border: 1px solid $greyblue;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            i {
+              @include text-14();
+              color: $greyblue;
+            }
+          }
+        }
+      }
+    }
+    .card-one {
+      background-image: url(../../../images/member-one.jpg);
+    }
+    .card-two {
+      background-image: url(../../../images/member-two.jpg);
+    }
+    .card-three {
+      background-image: url(../../../images/member-three.png);
+    }
+  }
+}

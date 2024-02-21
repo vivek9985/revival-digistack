@@ -2,10 +2,12 @@
 
 footer {
   background-color: $primary;
+
   .footer-container {
     width: 90%;
     max-width: 1320px;
     margin: auto;
+    overflow: hidden;
     .footer-content {
       padding: 50px 0;
       // background-color: lime;
@@ -72,7 +74,7 @@ footer {
           margin-bottom: 20px;
         }
         a {
-          @include text-16();
+          @include text-16(16px, 300, 1.75em, 0.01em);
           color: $textgrey;
         }
       }
@@ -101,6 +103,13 @@ footer {
               width: 20px;
               height: 20px;
             }
+          }
+          p:nth-child(1) {
+            @include text-14();
+          }
+          p:nth-child(2) {
+            @include text-16(16px, 300, 1.75em, 0.01em);
+            color: $textgrey;
           }
         }
       }
