@@ -22,20 +22,26 @@
     a {
       @include btn($secondary, $primary);
     }
+    span {
+      @include btn($secondary, $primary);
+    }
   }
   .team-container {
     display: grid;
     grid-template-columns: repeat(3, 424px);
     justify-content: space-between;
-    gap: 20px;
+    row-gap: 23px;
+    column-gap: 20px;
     @media (max-width: 1500px) {
       grid-template-columns: repeat(3, 1fr);
     }
     @media (max-width: 1080px) {
       grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
     }
     @media (max-width: 768px) {
       grid-template-columns: repeat(1, 1fr);
+      gap: 30px;
     }
 
     .team-card {
@@ -73,30 +79,15 @@
         }
         .member-name {
           @include text-20(20px, 900, 1.6em, -0.01em);
+          color: $primary;
+          &:hover {
+            color: $secondary;
+          }
         }
         .member-position {
           @include text-16();
           color: $greyblue;
           margin-bottom: 12px;
-        }
-        .socials {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          gap: 15px;
-          a {
-            width: 36px;
-            height: 36px;
-            border: 1px solid $greyblue;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            i {
-              @include text-14();
-              color: $greyblue;
-            }
-          }
         }
       }
     }
@@ -108,6 +99,24 @@
     }
     .card-three {
       background-image: url(../../../images/member-three.png);
+    }
+    .card-four {
+      background-image: url(../../../images/member-four.jpg);
+    }
+    .card-five {
+      background-image: url(../../../images/member-five.jpg);
+    }
+    .card-six {
+      background-image: url(../../../images/member-six.png);
+    }
+    .card-seven {
+      background-image: url(../../../images/member-seven.png);
+    }
+    .card-eight {
+      background-image: url(../../../images/member-eight.png);
+    }
+    .card-nine {
+      background-image: url(../../../images/member-nine.png);
     }
   }
 }

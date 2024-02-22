@@ -51,7 +51,7 @@
   letter-spacing: $spacing;
 }
 
-@mixin heading-32($size: 32px, $weight: 700, $spacing: -0.005em) {
+@mixin heading-32($size: 32px, $weight: 900, $spacing: -0.005em) {
   font-size: $size;
   font-weight: $weight;
   letter-spacing: $spacing;
@@ -85,6 +85,9 @@
   font-weight: $weight;
   line-height: $height;
   letter-spacing: $spacing;
+  @media (max-width: 1200px) {
+    font-size: 16px;
+  }
   @media (max-width: 768px) {
     font-size: 14px;
   }
