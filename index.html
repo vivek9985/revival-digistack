@@ -10,6 +10,12 @@
     />
     <title>Home - Revival Digistack</title>
     <!-- <link rel="stylesheet" href="./plugins/css/bootstrap.min.css" /> -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <link rel="stylesheet" href="./css/style.css" />
   </head>
 
@@ -420,36 +426,71 @@
       <!-- frequently questions section -->
       <section class="question-section">
         <div class="question-content">
-          <h2>Frequently Asked Questions</h2>
-          <p>
+          <h2 class="question-title">Frequently Asked Questions</h2>
+          <p class="question-description">
             Simple steps for a clean and healthy environment. We provide a wide
             range of services for the cleanliness and comfort of your home.
           </p>
         </div>
         <div class="question-container">
           <div class="question-and-answer-container">
-            <div class="question-and-answer">
-              <div>
-                <h3>Do I need to be home during the cleaning?</h3>
+            <div class="question-and-answer item-one">
+              <h3 class="question question-one">
+                Do I need to be home during the cleaning?
                 <img src="./images/home/plus-icon.svg" alt="" />
-              </div>
-              <p>
+              </h3>
+              <p class="answer answer-one">
+                It's not necessary for you to be home. Many clients provide us
+                with access to their homes, but we can accommodate your
+                preferences
+              </p>
+            </div>
+            <div class="question-and-answer item-two">
+              <h3 class="question question-two">
+                What cleaning supplies do you use?
+                <img src="./images/home/plus-icon.svg" alt="" />
+              </h3>
+              <p class="answer answer-two">
+                It's not necessary for you to be home. Many clients provide us
+                with access to their homes, but we can accommodate your
+                preferences
+              </p>
+            </div>
+            <div class="question-and-answer item-three">
+              <h3 class="question question-three">
+                Are your cleaners insured and background?
+                <img src="./images/home/plus-icon.svg" alt="" />
+              </h3>
+              <p class="answer answer-three">
+                It's not necessary for you to be home. Many clients provide us
+                with access to their homes, but we can accommodate your
+                preferences
+              </p>
+            </div>
+            <div class="question-and-answer item-four">
+              <h3 class="question question-four">
+                How do you determine pricing?
+                <img src="./images/home/plus-icon.svg" alt="" />
+              </h3>
+              <p class="answer answer-four">
                 It's not necessary for you to be home. Many clients provide us
                 with access to their homes, but we can accommodate your
                 preferences
               </p>
             </div>
           </div>
-          <form>
-            <h3>Have Any Questions?</h3>
-            <p>
-              We have several powerful plans to showcase your business and get
-              discovered.
-            </p>
-            <input type="email" placeholder="Email" />
-            <textarea placeholder="Your Messages..." rows="8"></textarea>
-            <input class="submit-btn" type="submit" value="Send your message" />
-          </form>
+          <div class="question-form">
+            <form>
+              <h3 class="form-title">Have Any Questions?</h3>
+              <p class="form-description">
+                We have several powerful plans to showcase your business and get
+                discovered.
+              </p>
+              <input class="input-field" type="email" placeholder="Email" />
+              <textarea class="text-area-field" placeholder="Your Messages..." rows="8"></textarea>
+              <input class="submit-btn" type="submit" value="Send your message" />
+            </form>
+          </div>
         </div>
       </section>
 
@@ -548,5 +589,6 @@
     </footer>
 
     <script src="./plugins/js/bootstrap.bundle.js"></script>
+    <script src="./plugins/js/accordion.js"></script>
   </body>
 </html>

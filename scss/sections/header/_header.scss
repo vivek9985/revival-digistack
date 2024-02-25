@@ -31,6 +31,9 @@
     gap: 20px;
     list-style: none;
     position: relative;
+    @media (max-width: 768px) {
+      display: none;
+    }
     .active {
       border-bottom: 1.5px solid $secondary;
     }
@@ -92,7 +95,9 @@
     display: flex;
     justify-content: end;
     gap: 8px;
-
+    @media (max-width: 768px) {
+      display: none;
+    }
     img {
       width: 19px;
       height: 19px;
@@ -109,25 +114,8 @@
     height: 25px;
     display: none;
     cursor: pointer;
-  }
-}
-
-@media only screen and (max-width: 1080px) {
-  .header-container {
-    width: 95%;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  .header-container {
-    .menu {
-      display: none;
+    @media (max-width: 768px) {
+      display: block;
     }
-    .phone-number {
-      display: none;
-    }
-  }
-  .header-container .menu-icon {
-    display: block;
   }
 }

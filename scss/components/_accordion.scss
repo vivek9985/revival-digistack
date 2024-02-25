@@ -1,0 +1,26 @@
+@use "../abstract" as *;
+
+.question-and-answer {
+  background-color: $lightgrey;
+  border-radius: 12px;
+  padding: 32px;
+  margin-bottom: 24px;
+  &-light {
+    background-color: white;
+  }
+  .question {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    @include text-20();
+  }
+  .answer {
+    display: none;
+    @include text-18();
+    margin-top: 20px;
+  }
+  .answer-one {
+    display: block;
+  }
+}

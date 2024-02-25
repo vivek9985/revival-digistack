@@ -12,10 +12,22 @@
   display: flex;
   justify-content: space-between;
   gap: 20px;
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 
   .service-content {
     width: 60%;
-
+    @media (max-width: 768px) {
+      width: 70%;
+      margin: auto;
+      text-align: center;
+    }
+    @media (max-width: 560px) {
+      width: 90%;
+      margin: auto;
+      text-align: center;
+    }
     h2 {
       @include heading-48();
     }
@@ -32,6 +44,10 @@
     display: flex;
     align-items: end;
     justify-content: end;
+    @media (max-width: 768px) {
+      width: 100%;
+      justify-content: center;
+    }
 
     button {
       @include btn($secondary, $primary);
@@ -44,7 +60,12 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
-
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (max-width: 580px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
   .service {
     background-color: $lightgrey;
     border: 1px solid $bordergrey;
@@ -122,36 +143,5 @@
       @include text-16(16px, 500, 1.75em, 0.01em);
       color: $secondary;
     }
-  }
-}
-
-@media only screen and (max-width: 1080px) {
-  .service-section {
-    width: 95%;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  .service-container {
-    flex-direction: column;
-
-    .service-content {
-      width: 100%;
-    }
-
-    .service-btn {
-      width: 100%;
-      display: flex;
-      justify-content: start;
-      margin-top: 10px;
-    }
-  }
-  .all-services {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media only screen and (max-width: 580px) {
-  .all-services {
-    grid-template-columns: repeat(1, 1fr);
   }
 }
