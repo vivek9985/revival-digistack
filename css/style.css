@@ -57,6 +57,11 @@ form {
   border: 1px solid var(--border-grey);
   border-radius: 24px;
 }
+@media (max-width: 560px) {
+  form {
+    padding: 20px;
+  }
+}
 form .form-title {
   font-size: 32px;
   font-weight: 900;
@@ -84,7 +89,8 @@ form .form-description {
     font-size: 14px;
   }
 }
-form .input-field {
+form .input-field,
+form .select-field {
   width: 100%;
   padding: 18px 16px 18px 24px;
   border-radius: 32px;
@@ -97,19 +103,27 @@ form .input-field {
   letter-spacing: 0.02em;
 }
 @media (max-width: 1200px) {
-  form .input-field {
+  form .input-field,
+  form .select-field {
     font-size: 16px;
   }
 }
 @media (max-width: 768px) {
-  form .input-field {
+  form .input-field,
+  form .select-field {
     font-size: 14px;
   }
 }
-form .input-field-transparent {
-  background-color: transparent;
+form .input-field-light,
+form .select-field-light {
+  background-color: white;
 }
-form .input-field:focus {
+form .input-field-borderless,
+form .select-field-borderless {
+  border: none;
+}
+form .input-field:focus,
+form .select-field:focus {
   outline: none;
 }
 form .text-area-field {
@@ -135,8 +149,11 @@ form .text-area-field {
     font-size: 14px;
   }
 }
-form .text-area-field-transparent {
-  background-color: transparent;
+form .text-area-field-light {
+  background-color: white;
+}
+form .text-area-field-borderless {
+  border: none;
 }
 form .text-area-field:focus {
   outline: none;
@@ -169,10 +186,21 @@ form .submit-btn {
 }
 
 .question-and-answer {
+  width: 100%;
   background-color: var(--light-grey);
   border-radius: 12px;
   padding: 32px;
   margin-bottom: 24px;
+}
+@media (max-width: 768px) {
+  .question-and-answer {
+    padding: 20px;
+  }
+}
+@media (max-width: 560px) {
+  .question-and-answer {
+    padding: 15px;
+  }
 }
 .question-and-answer-light {
   background-color: white;
@@ -192,12 +220,33 @@ form .submit-btn {
     font-size: 18px;
   }
 }
+@media (max-width: 786px) {
+  .question-and-answer .question {
+    font-size: 16px;
+  }
+}
+@media (max-width: 560px) {
+  .question-and-answer .question {
+    font-size: 14px;
+  }
+}
+.question-and-answer .question img {
+  width: 24px;
+  height: 24px;
+}
+@media (max-width: 560px) {
+  .question-and-answer .question img {
+    width: 20px;
+    height: 20px;
+  }
+}
 .question-and-answer .answer {
   display: none;
   font-size: 18px;
   font-weight: 400;
   line-height: 1.66em;
   letter-spacing: 0.02em;
+  padding-right: 5px;
   margin-top: 20px;
 }
 @media (max-width: 1200px) {
@@ -208,6 +257,11 @@ form .submit-btn {
 @media (max-width: 768px) {
   .question-and-answer .answer {
     font-size: 14px;
+  }
+}
+@media (max-width: 560px) {
+  .question-and-answer .answer {
+    margin-top: 10px;
   }
 }
 .question-and-answer .answer-one {
@@ -408,6 +462,16 @@ form .submit-btn {
     font-size: 18px;
   }
 }
+@media (max-width: 786px) {
+  .hero-section-container .hero-left-col p {
+    font-size: 16px;
+  }
+}
+@media (max-width: 560px) {
+  .hero-section-container .hero-left-col p {
+    font-size: 14px;
+  }
+}
 .hero-section-container .hero-left-col button {
   padding: 15px 35px;
   color: var(--primary);
@@ -543,6 +607,16 @@ form .submit-btn {
 @media (max-width: 1080px) {
   .experience-container div P {
     font-size: 18px;
+  }
+}
+@media (max-width: 786px) {
+  .experience-container div P {
+    font-size: 16px;
+  }
+}
+@media (max-width: 560px) {
+  .experience-container div P {
+    font-size: 14px;
   }
 }
 .experience-container .client {
@@ -1821,6 +1895,16 @@ footer .footer-container .copy-write-content .copy-write-text {
     font-size: 18px;
   }
 }
+@media (max-width: 786px) {
+  .team-section .team-container .team-card .member-info .member-name {
+    font-size: 16px;
+  }
+}
+@media (max-width: 560px) {
+  .team-section .team-container .team-card .member-info .member-name {
+    font-size: 14px;
+  }
+}
 .team-section .team-container .team-card .member-info .member-name:hover {
   color: var(--secondary);
 }
@@ -2387,11 +2471,19 @@ footer .footer-container .copy-write-content .copy-write-text {
   justify-content: space-between;
   gap: 24px;
 }
+@media (max-width: 768px) {
+  .faq-section {
+    flex-direction: column;
+    gap: 0px;
+    margin-top: 50px;
+  }
+}
 .faq-section .faq-container-left,
 .faq-section .faq-container-right {
+  width: 50%;
   max-width: 648px;
   display: grid;
-  grid-template-columns: repeat(1, 648px);
+  grid-template-columns: repeat(1, 1fr);
   justify-content: space-between;
   -moz-column-gap: 20px;
        column-gap: 20px;
@@ -2399,8 +2491,13 @@ footer .footer-container .copy-write-content .copy-write-text {
 @media (max-width: 1400px) {
   .faq-section .faq-container-left,
   .faq-section .faq-container-right {
-    width: 78%;
     grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .faq-section .faq-container-left,
+  .faq-section .faq-container-right {
+    width: 100%;
   }
 }
 
@@ -2408,4 +2505,23 @@ footer .footer-container .copy-write-content .copy-write-text {
   width: 90%;
   max-width: 1320px;
   margin: 50px auto 0 auto;
+}
+
+.booking-form-section {
+  width: 90%;
+  max-width: 872px;
+  margin: 100px auto;
+}
+@media (max-width: 768px) {
+  .booking-form-section {
+    margin: 70px auto;
+  }
+}
+@media (max-width: 560px) {
+  .booking-form-section {
+    margin: 50px auto;
+  }
+}
+.booking-form-section .booking-form form {
+  background-color: var(--light-grey);
 }/*# sourceMappingURL=style.css.map */

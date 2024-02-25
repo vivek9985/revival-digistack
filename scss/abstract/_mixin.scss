@@ -79,6 +79,12 @@
   @media (max-width: 1080px) {
     font-size: 18px;
   }
+  @media (max-width: 786px) {
+    font-size: 16px;
+  }
+  @media (max-width: 560px) {
+    font-size: 14px;
+  }
 }
 @mixin text-18($size: 18px, $weight: 400, $height: 1.66em, $spacing: 0.02em) {
   font-size: $size;

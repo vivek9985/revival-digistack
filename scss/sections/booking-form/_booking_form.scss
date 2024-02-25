@@ -1,0 +1,18 @@
+@use "../../abstract" as *;
+
+.booking-form-section {
+  width: 90%;
+  max-width: 872px;
+  margin: 100px auto;
+  @media (max-width: 768px) {
+    margin: 70px auto;
+  }
+  @media (max-width: 560px) {
+    margin: 50px auto;
+  }
+  .booking-form {
+    form {
+      background-color: $lightgrey;
+    }
+  }
+}

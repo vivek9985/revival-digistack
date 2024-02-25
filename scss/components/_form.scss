@@ -4,6 +4,9 @@ form {
   padding: 30px;
   border: 1px solid $bordergrey;
   border-radius: 24px;
+  @media (max-width: 560px) {
+    padding: 20px;
+  }
   .form-title {
     @include heading-32();
   }
@@ -11,7 +14,8 @@ form {
     margin-top: 10px;
     @include text-18();
   }
-  .input-field {
+  .input-field,
+  .select-field {
     width: 100%;
     padding: 18px 16px 18px 24px;
     border-radius: 32px;
@@ -20,13 +24,17 @@ form {
     background-color: $lightgrey;
     @include text-18();
 
-    &-transparent {
-      background-color: transparent;
+    &-light {
+      background-color: white;
+    }
+    &-borderless {
+      border: none;
     }
     &:focus {
       outline: none;
     }
   }
+
   .text-area-field {
     width: 100%;
     padding: 17px 16px 17px 24px;
@@ -37,8 +45,11 @@ form {
     background-color: $lightgrey;
     @include text-18();
 
-    &-transparent {
-      background-color: transparent;
+    &-light {
+      background-color: white;
+    }
+    &-borderless {
+      border: none;
     }
     &:focus {
       outline: none;
