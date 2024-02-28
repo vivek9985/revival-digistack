@@ -1,0 +1,10 @@
+@use "../../abstract" as *;
+
+.signin-form-section,
+.signup-form-section {
+  width: 90%;
+  max-width: 1320px;
+  margin: 100px auto;
+  display: flex;
+  gap: 136px;
+}

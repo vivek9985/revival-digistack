@@ -34,7 +34,8 @@
 
     p {
       @include text-18();
-      color: #535353;
+      // color: #535353;
+      color: $primary;
       margin-top: 20px;
     }
   }
@@ -49,7 +50,7 @@
       justify-content: center;
     }
 
-    button {
+    a {
       @include btn($secondary, $primary);
     }
   }

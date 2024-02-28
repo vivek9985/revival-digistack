@@ -10,10 +10,12 @@
   line-height: $height;
   letter-spacing: $spacing;
 
-  @media (max-width: 1380px) {
+  @media (max-width: 1400px) {
     font-size: 50px;
   }
-
+  @media (max-width: 1280px) {
+    font-size: 40px;
+  }
   @media (max-width: 1024px) {
     font-size: 35px;
   }
@@ -31,11 +33,17 @@
   font-weight: $weight;
   line-height: $height;
   letter-spacing: $spacing;
+  @media (max-width: 1280px) {
+    font-size: 40px;
+  }
   @media (max-width: 1080px) {
     font-size: 35px;
   }
   @media (max-width: 768px) {
     font-size: 30px;
+  }
+  @media (max-width: 560px) {
+    font-size: 26px;
   }
 }
 
@@ -49,14 +57,35 @@
   font-weight: $weight;
   line-height: $height;
   letter-spacing: $spacing;
+  @media (max-width: 1280px) {
+    font-size: 32px;
+  }
+  @media (max-width: 1080px) {
+    font-size: 24px;
+  }
+  @media (max-width: 768px) {
+    font-size: 20px;
+  }
+  @media (max-width: 560px) {
+    font-size: 18px;
+  }
 }
 
 @mixin heading-32($size: 32px, $weight: 900, $spacing: -0.005em) {
   font-size: $size;
   font-weight: $weight;
   letter-spacing: $spacing;
+  @media (max-width: 1280px) {
+    font-size: 24px;
+  }
   @media (max-width: 1080px) {
+    font-size: 22px;
+  }
+  @media (max-width: 768px) {
     font-size: 18px;
+  }
+  @media (max-width: 560px) {
+    font-size: 16px;
   }
 }
 
@@ -70,6 +99,15 @@
   font-weight: $weight;
   line-height: $height;
   letter-spacing: $spacing;
+  @media (max-width: 1280px) {
+    font-size: 20px;
+  }
+  @media (max-width: 1080px) {
+    font-size: 18px;
+  }
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
 }
 @mixin text-20($size: 20px, $weight: 700, $height: 1.6em, $spacing: -0.01em) {
   font-size: $size;
@@ -97,23 +135,35 @@
   @media (max-width: 768px) {
     font-size: 14px;
   }
+  @media (max-width: 560px) {
+    font-size: 12px;
+  }
 }
 @mixin text-16($size: 16px, $weight: 400, $height: 1.75em, $spacing: 0.01em) {
   font-size: $size;
   font-weight: $weight;
   line-height: $height;
   letter-spacing: $spacing;
+  @media (max-width: 1080px) {
+    font-size: 14px;
+  }
+  @media (max-width: 768px) {
+    font-size: 12px;
+  }
 }
 @mixin text-14($size: 14px, $weight: 300, $height: 1.75em, $spacing: 0.01em) {
   font-size: $size;
   font-weight: $weight;
   line-height: $height;
   letter-spacing: $spacing;
+  @media (max-width: 768px) {
+    font-size: 12px;
+  }
 }
 
 /*========BUTTON===========*/
 @mixin btn($bg-color, $text-color) {
-  padding: 15px 35px;
+  padding: 14px 35px;
   color: $text-color;
   cursor: pointer;
   border: 1px solid transparent;

@@ -1,0 +1,38 @@
+@use "../../abstract" as *;
+
+.news-section {
+  background-color: $textgrey;
+  .title-container {
+    width: 90%;
+    max-width: 1320px;
+    margin: auto;
+    padding-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .news-section-title {
+      @include heading-40();
+      color: $primary;
+    }
+    .view-all-news-btn {
+      @include btn($secondary, $primary);
+    }
+  }
+  .news-container {
+    width: 90%;
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 50px 0 100px 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    @media (max-width: 768px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  .news-right-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}

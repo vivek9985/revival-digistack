@@ -1,18 +1,77 @@
 @use "../abstract" as *;
 
-form {
-  padding: 30px;
+.main-form {
+  padding: 40px;
   border: 1px solid $bordergrey;
   border-radius: 24px;
   @media (max-width: 560px) {
     padding: 20px;
   }
+  &-medium-padding {
+    padding: 48px;
+  }
+  &-large-padding {
+    padding: 64px;
+  }
+  &-borderless {
+    border: none;
+  }
+  &-paddingless {
+    padding: 0;
+  }
+
   .form-title {
-    @include heading-32();
+    @include heading-48();
+    color: $primary;
+    margin-bottom: 12px;
+    &-medium-margin {
+      margin-bottom: 16px;
+    }
+    &-large-margin {
+      margin-bottom: 32px;
+    }
   }
   .form-description {
-    margin-top: 10px;
     @include text-18();
+    color: $primary;
+    margin-bottom: 16px;
+    &-medium-margin {
+      margin-bottom: 24px;
+    }
+    &-large-margin {
+      margin-bottom: 32px;
+    }
+  }
+  .socials-icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 32px;
+    .icon {
+      width: 165px;
+      height: 56px;
+      border-radius: 40px;
+      border: 1px solid $textgrey;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      img {
+        width: 32px;
+        height: 32px;
+      }
+    }
+  }
+  .all-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    &-medium-gap {
+      gap: 24px;
+      @media (max-width: 768px) {
+        gap: 16px;
+      }
+    }
   }
   .input-field,
   .select-field {
@@ -20,10 +79,15 @@ form {
     padding: 18px 16px 18px 24px;
     border-radius: 32px;
     border: 1px solid $bordergrey;
-    margin-top: 30px;
     background-color: $lightgrey;
     @include text-18();
-
+    color: $primary;
+    @media (max-width: 1280px) {
+      padding: 15px 16px 15px 24px;
+    }
+    @media (max-width: 1080px) {
+      padding: 12px 16px 12px 24px;
+    }
     &-light {
       background-color: white;
     }
@@ -32,6 +96,15 @@ form {
     }
     &:focus {
       outline: none;
+    }
+  }
+  .select-field {
+    padding: 21px 16px 21px 24px;
+    @media (max-width: 1280px) {
+      padding: 18px 16px 18px 24px;
+    }
+    @media (max-width: 1080px) {
+      padding: 15px 16px 15px 24px;
     }
   }
 
@@ -40,11 +113,18 @@ form {
     padding: 17px 16px 17px 24px;
     border-radius: 12px;
     border: 1px solid $bordergrey;
-    margin-top: 20px;
     resize: none;
     background-color: $lightgrey;
     @include text-18();
-
+    &-medium-rounded {
+      border-radius: 16px;
+    }
+    &-large-rounded {
+      border-radius: 32px;
+      @media (max-width: 1080px) {
+        border-radius: 12px;
+      }
+    }
     &-light {
       background-color: white;
     }
@@ -55,10 +135,31 @@ form {
       outline: none;
     }
   }
+  .forget-text {
+    @include text-16();
+    color: $primary;
+    text-align: right;
+    margin-top: 12px;
+  }
   .submit-btn {
     @include btn($secondary, $primary);
     cursor: pointer;
-    margin-top: 20px;
+    margin-top: 32px;
     width: 100%;
+    @media (max-width: 768px) {
+      margin-top: 20px;
+    }
+  }
+  .terms-porlicy,
+  .account-validation {
+    @include text-18();
+    color: $primary;
+    margin-top: 32px;
+  }
+  .terms-porlicy {
+    margin-top: 32px;
+  }
+  .account-validation {
+    margin-top: 24px;
   }
 }

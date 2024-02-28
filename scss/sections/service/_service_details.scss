@@ -1,0 +1,163 @@
+@use "../../abstract" as *;
+
+.service-details-section {
+  width: 90%;
+  max-width: 1320px;
+  margin: 100px auto 0 auto;
+  display: flex;
+  justify-content: space-between;
+  @media (max-width: 560px) {
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 50px;
+  }
+
+  .service-sidebar-container {
+    width: 424px;
+    @media (max-width: 1400px) {
+      width: 35%;
+    }
+    @media (max-width: 560px) {
+      width: 100%;
+    }
+    .service-sidebar {
+      width: 100%;
+      padding: 48px;
+      border-radius: 24px;
+      border: 1px solid $bordergrey;
+      @media (max-width: 1400px) {
+        padding: 40px;
+      }
+      @media (max-width: 1280px) {
+        padding: 32px;
+      }
+      @media (max-width: 1080px) {
+        padding: 25px;
+      }
+      @media (max-width: 768px) {
+        padding: 15px;
+      }
+    }
+  }
+  .service-details {
+    width: 760px;
+    @media (max-width: 1400px) {
+      width: 60%;
+    }
+    @media (max-width: 560px) {
+      width: 100%;
+    }
+    .service-details-title {
+      @include heading-32();
+      color: $primary;
+      margin-bottom: 16px;
+      @media (max-width: 768px) {
+        margin-bottom: 10px;
+      }
+    }
+    .service-details-description {
+      @include text-18();
+      color: $primary;
+      margin-bottom: 32px;
+      @media (max-width: 1080px) {
+        margin-bottom: 28px;
+      }
+      @media (max-width: 768px) {
+        margin-bottom: 20px;
+      }
+      @media (max-width: 560px) {
+        margin-bottom: 15px;
+      }
+    }
+    .thumbnail {
+      width: 100%;
+      object-fit: cover;
+      border-radius: 24px;
+      margin-bottom: 32px;
+      @media (max-width: 1080px) {
+        border-radius: 20px;
+        margin-bottom: 28px;
+      }
+      @media (max-width: 768px) {
+        border-radius: 15px;
+        margin-bottom: 20px;
+      }
+      @media (max-width: 560px) {
+        border-radius: 8px;
+        margin-bottom: 15px;
+      }
+    }
+    .multi-thumbnail {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 23px;
+      @media (max-width: 1080px) {
+        gap: 10px;
+      }
+      .thumbnail {
+        width: 366px;
+        object-fit: cover;
+        border-radius: 24px;
+        @media (max-width: 1400px) {
+          width: 48%;
+        }
+        @media (max-width: 1080px) {
+          border-radius: 20px;
+        }
+        @media (max-width: 768px) {
+          border-radius: 15px;
+        }
+        @media (max-width: 560px) {
+          border-radius: 8px;
+        }
+      }
+    }
+    ul {
+      margin-bottom: 32px;
+      @media (max-width: 1080px) {
+        margin-bottom: 28px;
+      }
+      @media (max-width: 768px) {
+        margin-bottom: 20px;
+      }
+      @media (max-width: 560px) {
+        margin-bottom: 15px;
+      }
+      li {
+        display: flex;
+        align-items: center;
+        margin-bottom: 16px;
+        padding-left: 20px;
+        position: relative;
+        @include text-18();
+        @media (max-width: 768px) {
+          padding-left: 12px;
+        }
+        &::before {
+          content: "";
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          background-color: $secondary;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: -1px;
+          margin: auto;
+          @media (max-width: 768px) {
+            width: 6px;
+            height: 6px;
+          }
+        }
+        color: $primary;
+        @media (max-width: 768px) {
+          margin-bottom: 10px;
+        }
+        @media (max-width: 560px) {
+          margin-bottom: 8px;
+        }
+      }
+    }
+  }
+}

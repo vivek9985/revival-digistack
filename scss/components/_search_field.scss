@@ -1,0 +1,40 @@
+@use "../abstract" as *;
+
+.search-bar {
+  .search-title {
+    @include text-18(18px, 900, 1.66em, 0.02em);
+    color: $primary;
+    margin-bottom: 24px;
+  }
+  .search-field {
+    border-radius: 32px;
+    border: 1px solid $bordergrey;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 25px;
+    margin-bottom: 24px;
+    .input-field {
+      width: 100%;
+      padding: 15px 0;
+      border-radius: 32px;
+      background-color: transparent;
+      border: none;
+      @include text-16();
+      color: $primary;
+      @media (max-width: 1080px) {
+        padding: 12px 0;
+      }
+      @media (max-width: 768px) {
+        padding: 10px 0;
+      }
+      &:focus {
+        outline: none;
+      }
+    }
+    i {
+      color: $primary;
+    }
+  }
+}

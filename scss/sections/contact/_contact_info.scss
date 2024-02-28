@@ -1,0 +1,27 @@
+@use "../../abstract" as *;
+
+.contact-info-section {
+  width: 90%;
+  max-width: 1320px;
+  margin: 100px auto 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 424px);
+  justify-content: space-between;
+  gap: 20px;
+  @media (max-width: 1600px) {
+    grid-template-columns: repeat(3, 32%);
+  }
+  @media (max-width: 1080px) {
+    margin-top: 70px;
+    grid-template-columns: repeat(3, 31%);
+  }
+  @media (max-width: 768px) {
+    margin-top: 50px;
+    grid-template-columns: repeat(2, 48%);
+    gap: 30px;
+  }
+  @media (max-width: 560px) {
+    grid-template-columns: repeat(1, 100%);
+    gap: 20px;
+  }
+}

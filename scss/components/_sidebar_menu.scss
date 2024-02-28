@@ -1,0 +1,71 @@
+@use "../abstract" as *;
+
+.sidebar-menu {
+  .sidebar-menu-title {
+    @include text-20(20px, 900, 1.66em, 0.02em);
+    color: $primary;
+    margin-bottom: 24px;
+    &-large {
+      @include heading-32();
+      border-bottom: 0.5px solid $greyblue;
+      padding-bottom: 10px;
+    }
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    li {
+      a {
+        display: block;
+        padding: 15px 25px;
+        border-radius: 32px;
+        border: 1px solid $textgrey;
+        @include text-16();
+        color: $primary;
+        @media (max-width: 1080px) {
+          padding: 12px 20px;
+        }
+        @media (max-width: 768px) {
+          padding: 10px 18px;
+        }
+        @media (max-width: 560px) {
+          padding: 8px 15px;
+        }
+        &:hover {
+          background-color: $textgrey;
+        }
+      }
+      .menu-item {
+        display: block;
+        padding: 15px 25px;
+        border-radius: 32px;
+        border: 1px solid $textgrey;
+        @include text-16();
+        &-primary {
+          border: 1px solid $bordergrey;
+          @include text-16(16px, 900, 1.75em, 0.01em);
+        }
+        color: $primary;
+        @media (max-width: 1080px) {
+          padding: 12px 20px;
+        }
+        @media (max-width: 768px) {
+          padding: 10px 18px;
+        }
+        @media (max-width: 560px) {
+          padding: 8px 15px;
+        }
+        &:hover {
+          background-color: $secondary;
+        }
+      }
+      .active {
+        background-color: $textgrey;
+        &-yellow {
+          background-color: $secondary;
+        }
+      }
+    }
+  }
+}

@@ -9,13 +9,13 @@
       type="image/x-icon"
     />
     <title>Home - Revival Digistack</title>
-    <!-- <link rel="stylesheet" href="./plugins/css/bootstrap.min.css" /> -->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
       integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+    <!-- <link rel="stylesheet" href="./plugins/css/bootstrap.min.css" /> -->
     <link rel="stylesheet" href="./css/style.css" />
   </head>
 
@@ -151,7 +151,7 @@
             </p>
           </div>
           <div class="service-btn">
-            <button>View All Services</button>
+            <a href="./services.html">View All Services</a>
           </div>
         </div>
         <div class="all-services">
@@ -491,24 +491,90 @@
             </div>
           </div>
           <div class="question-form">
-            <form>
-              <h3 class="form-title">Have Any Questions?</h3>
-              <p class="form-description">
+            <form class="main-form">
+              <h3 class="form-title form-title-medium-margin">
+                Have Any Questions?
+              </h3>
+              <p class="form-description form-description-medium-margin">
                 We have several powerful plans to showcase your business and get
                 discovered.
               </p>
-              <input class="input-field" type="email" placeholder="Email" />
-              <textarea
-                class="text-area-field"
-                placeholder="Your Messages..."
-                rows="8"
-              ></textarea>
+              <div class="all-inputs">
+                <input class="input-field" type="email" placeholder="Email" />
+                <textarea
+                  class="text-area-field"
+                  placeholder="Your Messages..."
+                  rows="7"
+                ></textarea>
+              </div>
               <input
                 class="submit-btn"
                 type="submit"
                 value="Send your message"
               />
             </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- news section -->
+      <section class="news-section">
+        <div class="title-container">
+          <h2 class="news-section-title">Cleaning tips and tricks</h2>
+          <a class="view-all-news-btn" href="./blogs.html">View All News</a>
+        </div>
+        <div class="news-container">
+          <div class="news-left-content">
+            <div class="news-card">
+              <img class="news-thumbnail" src="./images/news.png" alt="" />
+              <div class="news-content">
+                <p class="news-date">16 November 2023</p>
+                <a href="" class="news-title">
+                  Interior Clean By Our Trained Staff And On-Site
+                </a>
+                <p class="news-description">
+                  "I've used many cleaning services before, but none compare to
+                  this agency. The team was punctual.
+                </p>
+                <a href="" class="read-more-btn">Read more</a>
+              </div>
+            </div>
+          </div>
+          <div class="news-right-content">
+            <div class="news-card news-card-row">
+              <img
+                class="news-thumbnail news-thumbnail-small"
+                src="./images/news2.png"
+                alt=""
+              />
+              <div class="news-content">
+                <p class="news-date">16 November 2023</p>
+                <a href="" class="news-title"
+                  >Interior Clean By Our Trained Staff</a
+                >
+                <p class="news-description">
+                  "I've used many cleaning services before, but none compare
+                </p>
+                <a href="" class="read-more-btn">Read more</a>
+              </div>
+            </div>
+            <div class="news-card news-card-row">
+              <img
+                class="news-thumbnail news-thumbnail-small"
+                src="./images/news3.png"
+                alt=""
+              />
+              <div class="news-content">
+                <p class="news-date">16 November 2023</p>
+                <a href="" class="news-title"
+                  >Interior Clean By Our Trained Staff</a
+                >
+                <p class="news-description">
+                  "I've used many cleaning services before, but none compare
+                </p>
+                <a href="" class="read-more-btn">Read more</a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
