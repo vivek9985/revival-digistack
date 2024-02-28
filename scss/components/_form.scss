@@ -26,9 +26,18 @@
     margin-bottom: 12px;
     &-medium-margin {
       margin-bottom: 16px;
+      @media (max-width: 768px) {
+        margin-bottom: 14px;
+      }
     }
     &-large-margin {
       margin-bottom: 32px;
+      @media (max-width: 1080px) {
+        margin-bottom: 26px;
+      }
+      @media (max-width: 768px) {
+        margin-bottom: 22px;
+      }
     }
   }
   .form-description {
@@ -37,9 +46,18 @@
     margin-bottom: 16px;
     &-medium-margin {
       margin-bottom: 24px;
+      @media (max-width: 768px) {
+        margin-bottom: 16px;
+      }
     }
     &-large-margin {
       margin-bottom: 32px;
+      @media (max-width: 1080px) {
+        margin-bottom: 26px;
+      }
+      @media (max-width: 768px) {
+        margin-bottom: 22px;
+      }
     }
   }
   .socials-icons {
@@ -47,6 +65,12 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 32px;
+    @media (max-width: 1080px) {
+      margin-bottom: 26px;
+    }
+    @media (max-width: 768px) {
+      margin-bottom: 22px;
+    }
     .icon {
       width: 165px;
       height: 56px;
@@ -56,9 +80,27 @@
       align-items: center;
       justify-content: center;
       cursor: pointer;
+      @media (max-width: 1400px) {
+        width: 31%;
+        height: 50px;
+      }
+      @media (max-width: 768px) {
+        height: 50px;
+      }
+      @media (max-width: 560px) {
+        height: 40px;
+      }
       img {
         width: 32px;
         height: 32px;
+        @media (max-width: 1080px) {
+          width: 25px;
+          height: 25px;
+        }
+        @media (max-width: 768px) {
+          width: 20px;
+          height: 20px;
+        }
       }
     }
   }
@@ -146,20 +188,43 @@
     cursor: pointer;
     margin-top: 32px;
     width: 100%;
+    @media (max-width: 1080px) {
+      margin-top: 26px;
+    }
     @media (max-width: 768px) {
-      margin-top: 20px;
+      margin-top: 22px;
     }
   }
-  .terms-porlicy,
-  .account-validation {
+  .terms-policy {
     @include text-18();
     color: $primary;
     margin-top: 32px;
-  }
-  .terms-porlicy {
-    margin-top: 32px;
+    @media (max-width: 1080px) {
+      margin-top: 26px;
+    }
+    @media (max-width: 768px) {
+      margin-top: 22px;
+    }
+    span {
+      a {
+        @include text-18(18px, 600, 1.66em, 0.02em);
+        color: $primary;
+      }
+    }
   }
   .account-validation {
+    @include text-18();
+    color: $primary;
     margin-top: 24px;
+    @media (max-width: 768px) {
+      margin-top: 15px;
+    }
+    span {
+      a {
+        @include text-18(18px, 600, 1.66em, 0.02em);
+        color: $secondary;
+        margin-left: 5px;
+      }
+    }
   }
 }

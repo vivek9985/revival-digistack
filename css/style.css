@@ -110,8 +110,23 @@ body {
 .main-form .form-title-medium-margin {
   margin-bottom: 16px;
 }
+@media (max-width: 768px) {
+  .main-form .form-title-medium-margin {
+    margin-bottom: 14px;
+  }
+}
 .main-form .form-title-large-margin {
   margin-bottom: 32px;
+}
+@media (max-width: 1080px) {
+  .main-form .form-title-large-margin {
+    margin-bottom: 26px;
+  }
+}
+@media (max-width: 768px) {
+  .main-form .form-title-large-margin {
+    margin-bottom: 22px;
+  }
 }
 .main-form .form-description {
   font-size: 18px;
@@ -139,14 +154,39 @@ body {
 .main-form .form-description-medium-margin {
   margin-bottom: 24px;
 }
+@media (max-width: 768px) {
+  .main-form .form-description-medium-margin {
+    margin-bottom: 16px;
+  }
+}
 .main-form .form-description-large-margin {
   margin-bottom: 32px;
+}
+@media (max-width: 1080px) {
+  .main-form .form-description-large-margin {
+    margin-bottom: 26px;
+  }
+}
+@media (max-width: 768px) {
+  .main-form .form-description-large-margin {
+    margin-bottom: 22px;
+  }
 }
 .main-form .socials-icons {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 32px;
+}
+@media (max-width: 1080px) {
+  .main-form .socials-icons {
+    margin-bottom: 26px;
+  }
+}
+@media (max-width: 768px) {
+  .main-form .socials-icons {
+    margin-bottom: 22px;
+  }
 }
 .main-form .socials-icons .icon {
   width: 165px;
@@ -158,9 +198,37 @@ body {
   justify-content: center;
   cursor: pointer;
 }
+@media (max-width: 1400px) {
+  .main-form .socials-icons .icon {
+    width: 31%;
+    height: 50px;
+  }
+}
+@media (max-width: 768px) {
+  .main-form .socials-icons .icon {
+    height: 50px;
+  }
+}
+@media (max-width: 560px) {
+  .main-form .socials-icons .icon {
+    height: 40px;
+  }
+}
 .main-form .socials-icons .icon img {
   width: 32px;
   height: 32px;
+}
+@media (max-width: 1080px) {
+  .main-form .socials-icons .icon img {
+    width: 25px;
+    height: 25px;
+  }
+}
+@media (max-width: 768px) {
+  .main-form .socials-icons .icon img {
+    width: 20px;
+    height: 20px;
+  }
 }
 .main-form .all-inputs {
   display: flex;
@@ -340,13 +408,17 @@ body {
     font-size: 12px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 1080px) {
   .main-form .submit-btn {
-    margin-top: 20px;
+    margin-top: 26px;
   }
 }
-.main-form .terms-porlicy,
-.main-form .account-validation {
+@media (max-width: 768px) {
+  .main-form .submit-btn {
+    margin-top: 22px;
+  }
+}
+.main-form .terms-policy {
   font-size: 18px;
   font-weight: 400;
   line-height: 1.66em;
@@ -355,28 +427,102 @@ body {
   margin-top: 32px;
 }
 @media (max-width: 1200px) {
-  .main-form .terms-porlicy,
+  .main-form .terms-policy {
+    font-size: 16px;
+  }
+}
+@media (max-width: 768px) {
+  .main-form .terms-policy {
+    font-size: 14px;
+  }
+}
+@media (max-width: 560px) {
+  .main-form .terms-policy {
+    font-size: 12px;
+  }
+}
+@media (max-width: 1080px) {
+  .main-form .terms-policy {
+    margin-top: 26px;
+  }
+}
+@media (max-width: 768px) {
+  .main-form .terms-policy {
+    margin-top: 22px;
+  }
+}
+.main-form .terms-policy span a {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.66em;
+  letter-spacing: 0.02em;
+  color: var(--primary);
+}
+@media (max-width: 1200px) {
+  .main-form .terms-policy span a {
+    font-size: 16px;
+  }
+}
+@media (max-width: 768px) {
+  .main-form .terms-policy span a {
+    font-size: 14px;
+  }
+}
+@media (max-width: 560px) {
+  .main-form .terms-policy span a {
+    font-size: 12px;
+  }
+}
+.main-form .account-validation {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.66em;
+  letter-spacing: 0.02em;
+  color: var(--primary);
+  margin-top: 24px;
+}
+@media (max-width: 1200px) {
   .main-form .account-validation {
     font-size: 16px;
   }
 }
 @media (max-width: 768px) {
-  .main-form .terms-porlicy,
   .main-form .account-validation {
     font-size: 14px;
   }
 }
 @media (max-width: 560px) {
-  .main-form .terms-porlicy,
   .main-form .account-validation {
     font-size: 12px;
   }
 }
-.main-form .terms-porlicy {
-  margin-top: 32px;
+@media (max-width: 768px) {
+  .main-form .account-validation {
+    margin-top: 15px;
+  }
 }
-.main-form .account-validation {
-  margin-top: 24px;
+.main-form .account-validation span a {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.66em;
+  letter-spacing: 0.02em;
+  color: var(--secondary);
+  margin-left: 5px;
+}
+@media (max-width: 1200px) {
+  .main-form .account-validation span a {
+    font-size: 16px;
+  }
+}
+@media (max-width: 768px) {
+  .main-form .account-validation span a {
+    font-size: 14px;
+  }
+}
+@media (max-width: 560px) {
+  .main-form .account-validation span a {
+    font-size: 12px;
+  }
 }
 
 .question-and-answer {
@@ -4484,10 +4630,85 @@ footer .footer-container .copy-write-content .copy-write-text {
   }
 }
 
-.signin-form-section {
+.signin-form-section,
+.signup-form-section {
   width: 90%;
   max-width: 1320px;
-  margin: 100px auto;
+  margin: 120px auto;
   display: flex;
+  justify-content: space-between;
   gap: 136px;
+}
+@media (max-width: 1280px) {
+  .signin-form-section,
+  .signup-form-section {
+    gap: 0px;
+  }
+}
+@media (max-width: 1280px) {
+  .signin-form-section,
+  .signup-form-section {
+    margin: 80px auto;
+  }
+}
+@media (max-width: 768px) {
+  .signin-form-section,
+  .signup-form-section {
+    margin: 60px auto;
+    flex-direction: column;
+  }
+}
+@media (max-width: 560px) {
+  .signin-form-section,
+  .signup-form-section {
+    margin: 40px auto;
+  }
+}
+.signin-form-section .signin-banner,
+.signin-form-section .signup-banner,
+.signup-form-section .signin-banner,
+.signup-form-section .signup-banner {
+  width: 639px;
+  height: auto;
+  border-radius: 16px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (max-width: 1280px) {
+  .signin-form-section .signin-banner,
+  .signin-form-section .signup-banner,
+  .signup-form-section .signin-banner,
+  .signup-form-section .signup-banner {
+    width: 50%;
+  }
+}
+@media (max-width: 768px) {
+  .signin-form-section .signin-banner,
+  .signin-form-section .signup-banner,
+  .signup-form-section .signin-banner,
+  .signup-form-section .signup-banner {
+    display: none;
+  }
+}
+.signin-form-section .signin-form,
+.signin-form-section .signup-form,
+.signup-form-section .signin-form,
+.signup-form-section .signup-form {
+  width: 545px;
+}
+@media (max-width: 1280px) {
+  .signin-form-section .signin-form,
+  .signin-form-section .signup-form,
+  .signup-form-section .signin-form,
+  .signup-form-section .signup-form {
+    width: 45%;
+  }
+}
+@media (max-width: 768px) {
+  .signin-form-section .signin-form,
+  .signin-form-section .signup-form,
+  .signup-form-section .signin-form,
+  .signup-form-section .signup-form {
+    width: 100%;
+  }
 }/*# sourceMappingURL=style.css.map */

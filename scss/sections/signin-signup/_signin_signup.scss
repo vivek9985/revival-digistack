@@ -4,7 +4,45 @@
 .signup-form-section {
   width: 90%;
   max-width: 1320px;
-  margin: 100px auto;
+  margin: 120px auto;
   display: flex;
+  justify-content: space-between;
   gap: 136px;
+  @media (max-width: 1280px) {
+    gap: 0px;
+  }
+  @media (max-width: 1280px) {
+    margin: 80px auto;
+  }
+  @media (max-width: 768px) {
+    margin: 60px auto;
+    flex-direction: column;
+  }
+  @media (max-width: 560px) {
+    margin: 40px auto;
+  }
+  .signin-banner,
+  .signup-banner {
+    width: 639px;
+    height: auto;
+    border-radius: 16px;
+    object-fit: cover;
+    @media (max-width: 1280px) {
+      width: 50%;
+    }
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+  .signin-form,
+  .signup-form {
+    width: 545px;
+    // background-color: red;
+    @media (max-width: 1280px) {
+      width: 45%;
+    }
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+  }
 }

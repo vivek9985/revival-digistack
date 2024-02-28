@@ -3,7 +3,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="shortcut icon" href="./images/home/logo.svg" type="image/x-icon" />
-  <title>Sign in - Revival Digistack</title>
+  <title>Sign up - Revival Digistack</title>
   <!-- <link rel="stylesheet" href="./plugins/css/bootstrap.min.css" /> -->
   <link rel="stylesheet" href="./css/style.css" />
 
@@ -52,9 +52,9 @@
       <section class="title-section">
         <div class="title-banner">
           <div>
-            <h2 class="title">Sign in</h2>
+            <h2 class="title">Sign up</h2>
             <p class="description">
-              Welcome back! Sign in access your account securely.
+              Welcome back! Sign up access your account securely.
             </p>
           </div>
           <img class="jigjag-icon-one" src="./images/jigjag-icon.png" alt="" />
@@ -68,13 +68,13 @@
       </section>
 
       <!-- sign in form section -->
-      <section class="signin-form-section">
-        <img class="signin-banner" src="./images/signin.png" alt="" />
-        <div class="signin-form">
+      <section class="signup-form-section">
+        <img class="signup-banner" src="./images/signin.png" alt="" />
+        <div class="signup-form">
           <form class="main-form main-form-borderless main-form-paddingless">
-            <h3 class="form-title form-title-medium-margin">Sing in</h3>
+            <h3 class="form-title form-title-medium-margin">Sing up</h3>
             <p class="form-description form-description-large-margin">
-              Please fill your email & password to log in
+              Sign up with social account or enter your details
             </p>
             <div class="socials-icons">
               <div class="icon">
@@ -90,19 +90,24 @@
             <div class="all-inputs all-inputs-medium-gap">
               <input
                 class="input-field input-field-light"
+                type="text"
+                placeholder="Full Name*"
+                required
+              />
+              <input
+                class="input-field input-field-light"
                 type="email"
-                placeholder="Email address"
+                placeholder="Email address*"
                 required
               />
               <input
                 class="input-field input-field-light"
                 type="password"
-                placeholder="Password"
+                placeholder="Password*"
                 required
               />
             </div>
-            <p class="forget-text">Forget password?</p>
-            <input class="submit-btn" type="submit" value="Sign in" />
+            <input class="submit-btn" type="submit" value="Sign up" />
             <p class="terms-policy">
               By confirming your email, you agree to our
               <span><a href="">Term of service</a></span> and that you have read
@@ -110,8 +115,8 @@
               >.
             </p>
             <p class="account-validation">
-              Already have an account.<span
-                ><a href="./signup.html">Sign up</a></span
+              Don't have an account.<span
+                ><a href="./signin.html">Log in</a></span
               >
             </p>
           </form>
