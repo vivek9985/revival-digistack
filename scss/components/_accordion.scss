@@ -24,7 +24,7 @@
     align-items: center;
     justify-content: space-between;
     cursor: pointer;
-    @include text-20();
+    @include text-20(20px, 800, 1.6em, -0.01em);
     img {
       width: 24px;
       height: 24px;
