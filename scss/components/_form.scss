@@ -24,6 +24,9 @@
     @include heading-48();
     color: $primary;
     margin-bottom: 12px;
+    &-small-text {
+      @include heading-32();
+    }
     &-medium-margin {
       margin-bottom: 16px;
       @media (max-width: 768px) {

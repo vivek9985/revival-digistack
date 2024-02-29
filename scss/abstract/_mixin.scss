@@ -11,7 +11,7 @@
   letter-spacing: $spacing;
 
   @media (max-width: 1400px) {
-    font-size: 50px;
+    font-size: 60px;
   }
   @media (max-width: 1280px) {
     font-size: 40px;
@@ -20,7 +20,7 @@
     font-size: 35px;
   }
   @media (max-width: 768px) {
-    font-size: 40px;
+    font-size: 30px;
   }
 }
 @mixin heading-48(
@@ -109,18 +109,18 @@
     font-size: 16px;
   }
 }
-@mixin text-20($size: 20px, $weight: 700, $height: 1.6em, $spacing: -0.01em) {
+@mixin text-20($size: 20px, $weight: 400, $height: 1.6em, $spacing: -0.01em) {
   font-size: $size;
   font-weight: $weight;
   line-height: $height;
   letter-spacing: $spacing;
-  @media (max-width: 1080px) {
+  @media (max-width: 1280px) {
     font-size: 18px;
   }
-  @media (max-width: 786px) {
+  @media (max-width: 1080px) {
     font-size: 16px;
   }
-  @media (max-width: 560px) {
+  @media (max-width: 786px) {
     font-size: 14px;
   }
 }
@@ -129,7 +129,7 @@
   font-weight: $weight;
   line-height: $height;
   letter-spacing: $spacing;
-  @media (max-width: 1200px) {
+  @media (max-width: 1280px) {
     font-size: 16px;
   }
   @media (max-width: 768px) {

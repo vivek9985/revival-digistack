@@ -4,131 +4,210 @@
   width: 90%;
   max-width: 1320px;
   margin: auto;
-}
 
-.hero-section-container {
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(2, 648px);
-  grid-gap: 20px;
-  margin: 10px 0 100px 0;
-  @media (max-width: 1400px) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  @media (max-width: 768px) {
-    grid-template-columns: repeat(1, 1fr);
-  }
-
-  .hero-left-col {
-    background-color: $primary;
-    border-radius: 24px;
-    padding: 40px 40px;
-
-    h4 {
-      @include text-16();
-      color: $lightgrey;
-
-      span {
-        color: $secondary;
-      }
-    }
-
-    h2 {
-      @include heading-64();
-      color: $lightgrey;
-      padding: 20px 0;
-    }
-
-    p {
-      @include text-20(
-        $size: 20px,
-        $weight: 500,
-        $height: 1.6em,
-        $spacing: -0.01em
-      );
-      color: $textgrey;
-    }
-
-    button {
-      @include btn($secondary, $primary);
-      margin-top: 40px;
-    }
-  }
-
-  .hero-right-col {
-    border-radius: 24px;
+  .hero-section-container {
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    gap: 20px;
-
-    .hero-right-upper-row {
-      width: 100%;
-      height: 50%;
+    justify-content: space-between;
+    gap: 24px;
+    margin: 20px 0 120px 0;
+    @media (max-width: 1080px) {
+      gap: 15px;
+      margin: 15px 0 80px 0;
+    }
+    @media (max-width: 768px) {
+      margin: 0 0 60px 0;
+      flex-direction: column;
+      gap: 30px;
+    }
+    @media (max-width: 560px) {
+      margin-bottom: 40px;
+    }
+    .hero-left-content {
+      width: 648px;
+      height: 626px;
+      background-color: $primary;
       border-radius: 24px;
-      overflow: hidden;
-      position: relative;
-
-      .cleaning-tools {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+      padding: 70px 48px;
+      @media (max-width: 1600px) {
+        width: 50%;
+        height: auto;
       }
-
-      .square-part {
-        position: absolute;
-        left: 5%;
-        top: 5%;
+      @media (max-width: 1080px) {
+        padding: 30px;
+        border-radius: 15px;
+      }
+      @media (max-width: 768px) {
+        width: 100%;
+        padding: 40px;
+        border-radius: 12px;
+      }
+      @media (max-width: 560px) {
+        padding: 40px 25px;
+        border-radius: 10px;
+      }
+      .hero-subtitle {
+        @include text-16();
+        color: $lightgrey;
+        span {
+          color: $secondary;
+        }
+      }
+      .hero-title {
+        @include heading-64();
+        color: $lightgrey;
+        padding: 20px 0;
+        @media (max-width: 1080px) {
+          padding: 12px 0;
+        }
+      }
+      .hero-description {
+        @include text-20(20px, 500, 1.6em, -0.01em);
+        color: $textgrey;
+        @media (max-width: 1280px) {
+          @include text-20(20px, 400, 1.6em, -0.01em);
+        }
+      }
+      .book-btn {
+        @include btn($secondary, $primary);
+        margin-top: 40px;
+        @media (max-width: 1080px) {
+          margin-top: 25px;
+        }
       }
     }
 
-    .hero-right-down-row {
-      height: 50%;
-      display: flex;
+    .hero-right-content {
+      width: 648px;
+      height: 626px;
       border-radius: 24px;
-      overflow: hidden;
-      background-color: $lightgrey;
-
-      .slider-image {
-        width: 40%;
-
-        img {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 24px;
+      @media (max-width: 1600px) {
+        width: 50%;
+        height: auto;
+      }
+      @media (max-width: 1080px) {
+        width: 50%;
+        height: auto;
+        gap: 15px;
+      }
+      @media (max-width: 768px) {
+        width: 100%;
+      }
+      .hero-right-upper-row {
+        width: 100%;
+        height: 312px;
+        border-radius: 24px;
+        position: relative;
+        @media (max-width: 1600px) {
+          height: 52%;
+        }
+        @media (max-width: 768px) {
+          height: 230px;
+        }
+        .cleaning-tools {
           width: 100%;
           height: 100%;
+          border-radius: 24px;
           object-fit: cover;
+          @media (max-width: 1080px) {
+            border-radius: 15px;
+          }
+          @media (max-width: 768px) {
+            border-radius: 12px;
+          }
+          @media (max-width: 560px) {
+            border-radius: 10px;
+          }
+        }
+        .square-part {
+          position: absolute;
+          left: 5%;
+          top: 5%;
         }
       }
-
-      .slider-content {
-        padding: 15px;
-        position: relative;
-        width: 60%;
-      }
-
-      .arrow-container {
+      .hero-right-down-row {
+        height: 290px;
         display: flex;
-        align-items: center;
-        gap: 10px;
-        position: absolute;
-        bottom: 10%;
-        left: 10%;
-
-        div {
-          width: 40px;
-          height: 40px;
+        border-radius: 24px;
+        overflow: hidden;
+        background-color: $lightgrey;
+        @media (max-width: 1600px) {
+          height: 48%;
+        }
+        @media (max-width: 1080px) {
+          border-radius: 15px;
+          height: 230px;
+        }
+        @media (max-width: 768px) {
+          border-radius: 12px;
+          height: 230px;
+        }
+        @media (max-width: 560px) {
+          border-radius: 10px;
+        }
+        .slider-image {
+          width: 280px;
+          @media (max-width: 768px) {
+            width: 40%;
+          }
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            @media (max-width: 768px) {
+              object-fit: cover;
+              object-position: top;
+            }
+          }
+        }
+        .slider-content {
+          position: relative;
+          width: 368px;
+          padding: 24px 32px;
+          @media (max-width: 1080px) {
+            padding: 12px 20px;
+          }
+          @media (max-width: 768px) {
+            padding: 35px 32px;
+            width: 60%;
+          }
+          @media (max-width: 560px) {
+            padding: 20px 15px;
+          }
+          .slider-description {
+            @include text-18();
+            @media (max-width: 1080px) {
+              @include text-16();
+            }
+          }
+        }
+        .arrow-container {
           display: flex;
           align-items: center;
-          justify-content: center;
-          border-radius: 50%;
-          cursor: pointer;
-        }
-
-        .left-arrow {
-          border: 1px solid $secondary;
-        }
-
-        .right-arrow {
-          background-color: $secondary;
-          border: 1px solid $secondary;
+          gap: 10px;
+          position: absolute;
+          bottom: 10%;
+          left: 10%;
+          div {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            cursor: pointer;
+          }
+          .left-arrow {
+            border: 1px solid $secondary;
+          }
+          .right-arrow {
+            background-color: $secondary;
+            border: 1px solid $secondary;
+          }
         }
       }
     }
